@@ -8,7 +8,7 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 
 const MONGO_URI =
-  'mongodb+srv://Wunder:wunderpus@wunder.ldeokyo.mongodb.net/?retryWrites=true&w=majority';
+'mongodb+srv://Solit95:Loveshoes6%21@cluster0.mfblrs9.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(MONGO_URI);
 
 app.use(express.json());
