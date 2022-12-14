@@ -20,8 +20,9 @@ userController.createUser = async (req, res, next) => {
 
 // Get user info
 userController.getUser = (req, res, next) => {
-  // User.findOne({ name: req.body.name})
-  User.findOne({ name: 'Arthur' })
+  const userParam = req.params.userParam
+  
+  User.findOne({ name: userParam })
     .then((user) => {
       if (user) {
         res.locals.user = user; // <-- send back all user info
@@ -44,13 +45,14 @@ userController.addPark = async (req, res, next) => {
       activitiesCompleted: req.body.activitiesDone,
     };
     // const user = await User.findOne({ name: req.body.name})
-    const user = await User.findOne({ name: 'Arthur' });
+    const userParam = req.params.userParam
+    const user = await User.findOne({ name: userParam });
     if (user) {
       console.log('user',user)
       const parksVisited = { ...user.parksVisited, [parkCode]: newPark };
       user.parksVisited = parksVisited;
       const newUser = await user.save();
-      console.log('newUser',newUser);
+      console.log('newUser', newUser);
     }
     res.locals.park = user.parksVisited[parkCode]; // <-- send back the newly added park's info
     return next();
@@ -61,8 +63,9 @@ userController.addPark = async (req, res, next) => {
 
 // Get parks completed array for icon coloring on landing page
 userController.getParks = (req, res, next) => {
+  const userParam = req.params.userParam
   // User.findOne({ name: req.body.name})
-  User.findOne({ name: 'Arthur' })
+  User.findOne({ name: userParam })
     .then((user) => {
       res.locals.parks = Object.keys(user.parksVisited); // <-- send back array of parks completed
       return next();
@@ -79,7 +82,7 @@ userController.getParkInfo = (req, res, next) => {
     const { parkCode } = req.params;
     const { parksVisited } = res.locals.user;
     // console.log(parkCode);
-    console.log(parksVisited);
+    // console.log(parksVisited);
     res.locals.parkInfo = parksVisited[parkCode];
     return next();
   } catch (err) {
