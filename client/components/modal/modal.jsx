@@ -20,6 +20,7 @@ const Modal = (props) => {
   // send fetch request to DB to get user info
   useEffect(() => {
     fetch(`http://localhost:3000/NPS/modalInfo/${props.parkCode}`)
+    console.log('props.parkcode', props.parkCode)
       .then((res) => res.json())
       .then((data) => {
         setNpsData(data);
@@ -30,7 +31,7 @@ const Modal = (props) => {
     fetch(`http://localhost:3000/user/${props.parkCode}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log('data in the modal is: ', data);
+        console.log('data in the modal is: ', data);
         setUserData(data);
         // console.log('user data: ', data);
       })
