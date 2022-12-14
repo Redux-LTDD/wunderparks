@@ -21,7 +21,6 @@
     "url": "https://github.com/Wunderparks/wunderparks/issues"
   },
   "homepage": "https://github.com/Wunderparks/wunderparks#readme",
-
   "dependencies": {
     "axios": "^1.2.1",
     "body-parser": "^1.20.1",
@@ -64,6 +63,7 @@
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
+    "supertest": "^6.3.3",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }

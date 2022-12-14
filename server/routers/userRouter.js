@@ -4,7 +4,7 @@ const userController = require('../controllers/UserController');
 const userRouter = express.Router();
 
 userRouter.get(
-  '/:parkCode',
+  '/:userParam/:parkCode',
   userController.getUser,
   userController.getParkInfo,
   (_req, res) => {
@@ -12,16 +12,16 @@ userRouter.get(
   }
 );
 
-userRouter.get('/', userController.getParks, (_req, res) => {
+userRouter.get('/:userParam', userController.getParks, (_req, res) => {
   return res.status(200).json(res.locals.parks);
 });
 
-userRouter.post('/:parkCode', userController.addPark, (_req, res) => {
+userRouter.post('/:userParam/:parkCode', userController.addPark, (_req, res) => {
   return res.status(200).json(res.locals.park);
 });
 
 userRouter.post('/', userController.createUser, (_req, res) => {
-  return res.status(200).json(res.locals.newUser);
+  return res.status(201).json(res.locals.newUser);
 });
 
 
