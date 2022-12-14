@@ -12,30 +12,28 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(62, 82, 69);
-  background-image: repeating-linear-gradient(-45deg,
-      rgba(255, 255, 255, 0.25),
-      rgba(255, 255, 255, 0.25) 1px,
-      transparent 1px,
-      transparent 6px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 1px,
+    transparent 6px
+  );
   font-family: 'Roboto', sans-serif;
   background-size: 4px 4px;
 }
 
 .app {
   display: flex;
-
 }
 
 h1 {
   color: white;
   text-align: center;
-  ;
 }
 
-
-
 .imageIcon {
-  filter: grayscale(10);
+  // filter: grayscale(10);
   padding: 8px;
   border-radius: 30px;
   flex-shrink: 0;
@@ -43,8 +41,6 @@ h1 {
   height: 148px;
   margin: 2px;
   transition-duration: 700ms;
-
-
 
   &:hover {
     cursor: pointer;
@@ -62,7 +58,7 @@ h1 {
 }
 
 .container {
-  overflow: sroll;
+  overflow: scroll;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

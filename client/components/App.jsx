@@ -2,7 +2,7 @@ import React, { useEffect, useState, useLayoutEffect } from 'react';
 import SidebarContainer from '../containers/SidebarContainer.jsx';
 import MainContainer from '../containers/MainContainer.jsx';
 
-const App = () => {
+const App = (props) => {
   // let codes = [];
   const [codes, setCodes] = useState([]);
 
@@ -11,6 +11,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    props.test();
     fetch('http://localhost:3000/user/', {
       method: 'GET',
       headers: { 'Content-Type': 'Application/JSON' },
@@ -22,12 +23,11 @@ const App = () => {
       .catch((err) => console.log('AddPark fetch POST to api: ERROR: ', err));
   }, []);
 
-
   return (
-    <div className="app">
+    <div className='app'>
       <SidebarContainer codes={codes} />
-      <div className="right">
-        <div className="float">
+      <div className='right'>
+        <div className='float'>
           <h1> WÜNDER PARKS</h1>
         </div>
         <MainContainer codes={codes} />
