@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
+import axios from 'axios';
+
 import SidebarContainer from '../containers/SidebarContainer.jsx';
 import MainContainer from '../containers/MainContainer.jsx';
 
@@ -12,16 +14,13 @@ const App = (props) => {
 
   useEffect(() => {
     console.log('CODES HERE++++++++++++++++ ', codes);
-    fetch('http://localhost:3000/user/', {
-      method: 'GET',
-      headers: { 'Content-Type': 'Application/JSON' },
-    })
-      .then((res) => res.json())
+    axios
+      .get('http://localhost:3000/user/')
       .then((data) => {
-        setCodes(data);
-        console.log('CODES HERE++++++++++++++++ ', codes);
+        console.log('CODES HERE++++++++++++++++ ', data);
+        return setCodes(data);
       })
-      .catch((err) => console.log('AddPark fetch POST to api: ERROR: ', err));
+      .catch((err) => err); //console.log('AddPark fetch POST to api: ERROR: ', err));
   }, []);
 
   return (
