@@ -11,7 +11,7 @@ const App = (props) => {
   };
 
   useEffect(() => {
-    props.test();
+    console.log('CODES HERE++++++++++++++++ ', codes);
     fetch('http://localhost:3000/user/', {
       method: 'GET',
       headers: { 'Content-Type': 'Application/JSON' },
@@ -19,6 +19,7 @@ const App = (props) => {
       .then((res) => res.json())
       .then((data) => {
         setCodes(data);
+        console.log('CODES HERE++++++++++++++++ ', codes);
       })
       .catch((err) => console.log('AddPark fetch POST to api: ERROR: ', err));
   }, []);
