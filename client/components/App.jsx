@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react';
 import SidebarContainer from '../containers/SidebarContainer.jsx';
 import MainContainer from '../containers/MainContainer.jsx';
+import { firstFetch } from './api';
 
 const App = () => {
   // let codes = [];
@@ -13,11 +14,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3000/user/${user}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'Application/JSON' },
-    })
-      .then((res) => res.json())
+    firstFetch(user)
       .then((data) => {
         setCodes(data);
       })
@@ -26,17 +23,18 @@ const App = () => {
 
   return (
     <div className='app'>
-      <SidebarContainer
+      {/* <SidebarContainer
         codes={codes}
         users={users}
         user={user}
         setUser={setUser}
-      />
+      /> */}
       <div className='right'>
         <div className='float'>
           <h1> WÜNDER PARKS {user}</h1>
+          {/* <h2>Natty Parks</h2> */}
         </div>
-        <MainContainer codes={codes} user={user} />
+        {/* <MainContainer codes={codes} user={user} /> */}
       </div>
     </div>
   );

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testings snapshots renders correctly according to snapshot 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="right"
+  >
+    <div
+      className="float"
+    >
+      <h1>
+         WÜNDER PARKSS 
+        Arthur
+      </h1>
+    </div>
+  </div>
+</div>
+`;

@@ -75,7 +75,11 @@ const Sidebar = (props) => {
   for (let park in parkcodes) {
     const { codes, users, user, setUser } = props;
     if (!codes.includes(parkcodes[park])) {
-      parkOptions.push(<option value={parkcodes[park]}>{park}</option>);
+      parkOptions.push(
+        <option id={'TEST ' + parkcodes[park]} value={parkcodes[park]}>
+          {park}
+        </option>
+      );
     }
   }
 
@@ -84,7 +88,7 @@ const Sidebar = (props) => {
   return (
     <div key='form' id='form'>
       <form className='userform'>
-        {/* <h2>Log a trip</h2> */}
+        <h2>Log a trip</h2>
         <div className='select-dropdown'>
           <select
             name='user'
