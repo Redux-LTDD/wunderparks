@@ -36,7 +36,7 @@ const Sidebar = (props) => {
     activities[item] = !activities[item];
     // console.log('activities state is: ', activities);
   }
-  console.log('FORM PROPS', props);
+  console.log('FORM PROPS', props.users);
 
   function savePark(e) {
     e.preventDefault();
@@ -62,6 +62,13 @@ const Sidebar = (props) => {
     }
   }
 
+  function setActiveUser(e) {
+    e.preventDefault();
+    console.log('element', e.target.value);
+    props.setUser(e.target.value);
+    console.log('currentUser', props.user);
+  }
+
   // declare parkOptionsArr
   const parkOptions = [];
   // iterate through the parkcodes js file
@@ -73,7 +80,7 @@ const Sidebar = (props) => {
   }
 
   // render an option element for Select, pass in the parkCode value as value, and give the label/input as the parkCode key
-
+  const { users } = props;
   return (
     <div key='form' id='form'>
       <form className='userform'>
@@ -84,10 +91,12 @@ const Sidebar = (props) => {
             id='user'
             className='select-dropdown'
             value={props.user}
-            onChange={(e) => setParkCode(e.target.value)}
+            onChange={setActiveUser}
           >
             <option value=''>Select User:</option>
-            {props.users}
+            {users.map((x) => {
+              return <option value={x}>{x}</option>;
+            })}
           </select>
         </div>
       </form>

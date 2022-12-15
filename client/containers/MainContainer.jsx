@@ -7,9 +7,8 @@ const MainContainer = (props) => {
   /* do we declare state here and prop drill down or at IconMaker?? */
   // return out the HTML elements
   return (
-    <div className="main" id="mainContainer">
-      <IconMaker 
-        codes={props.codes}/>
+    <div className='main' id='mainContainer'>
+      <IconMaker codes={props.codes} user={props.user} />
     </div>
   );
 };

@@ -34,9 +34,9 @@ const App = () => {
       />
       <div className='right'>
         <div className='float'>
-          <h1> WÜNDER PARKS</h1>
+          <h1> WÜNDER PARKS {user}</h1>
         </div>
-        <MainContainer codes={codes} />
+        <MainContainer codes={codes} user={user} />
       </div>
     </div>
   );
