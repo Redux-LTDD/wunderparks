@@ -49,8 +49,13 @@ const Sidebar = (props) => {
       for (let item in activities) {
         activities[item] && activitiesDone.push(item);
       }
-      console.log({ parkCode, date, activitiesDone, notes });
-      fetch(`http://localhost:3000/user/${parkCode}`, {
+      console.log('POSTING', props.user, {
+        parkCode,
+        date,
+        activitiesDone,
+        notes,
+      });
+      fetch(`http://localhost:3000/user/${props.user}/${parkCode}`, {
         method: 'POST',
         headers: { 'Content-Type': 'Application/JSON' },
         body: JSON.stringify({ parkCode, date, activitiesDone, notes }),
