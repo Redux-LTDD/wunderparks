@@ -1,4 +1,3 @@
-// hi
 const mongoose = require('mongoose');
 const User = require('../server/models/userModel.js');
 const { response } = require('express');
@@ -66,6 +65,53 @@ describe('Route integration', () => {
             })
         });
     });
+
+    describe('/NPS', () => {
+        describe('GET', () => {
+            it('router should respond with 200 status and application json data type', () => {
+                return request(server)
+                    .get('/NPS/parks')
+                    .expect('Content-Type', /application\/json/)
+                    .expect(200)
+            })
+            it('router should respond with object of parks and parkcodes', () => {
+                return request(server)
+                    .get('/NPS/parks')
+                    .expect('Content-Type', /application\/json/)
+                    .then((res) => {
+                        expect(res.body.Acadia).toEqual('acad')
+                    })
+            })
+        })
+        describe('GET', () => {
+            it('router should respond with 200 status and application json data type', () => {
+                return request(server)
+                    .get('/NPS/parks/acad')
+                    .expect('Content-Type', /application\/json/)
+                    .expect(200)
+            })
+            it('router should respond with full name of park sent through url', () => {
+                return request(server)
+                    .get('/NPS/parks/acad')
+                    .expect('Content-Type', /application\/json/)
+                    .expect((res) => expect(res.body.fullName).toEqual('Acadia National Park'))
+            })
+        })
+        describe('GET', () => {
+            it('router should respond with 200 status and application json data type', () => {
+                return request(server)
+                    .get('/NPS/modalInfo/acad')
+                    .expect('Content-Type', /application\/json/)
+                    .expect(200)
+            })
+            it('router should respond with object with states key and ME value', () => {
+                return request(server)
+                    .get('/NPS/modalInfo/acad')
+                    .expect('Content-Type', /application\/json/)
+                    .expect((res) => expect(res.body.states).toBe('ME'))
+            })
+        })
+    })
     
     describe('/user', () =>{
 
