@@ -56,6 +56,55 @@ describe('Route integration', () => {
     });
   });
 
+  describe('/NPS', () => {
+    describe('GET', () => {
+      it('router should respond with 200 status and application json data type', () => {
+        return request(server)
+          .get('/NPS/parks')
+          .expect('Content-Type', /application\/json/)
+          .expect(200);
+      });
+      it('router should respond with object of parks and parkcodes', () => {
+        return request(server)
+          .get('/NPS/parks')
+          .expect('Content-Type', /application\/json/)
+          .then((res) => {
+            expect(res.body.Acadia).toEqual('acad');
+          });
+      });
+    });
+    describe('GET', () => {
+      it('router should respond with 200 status and application json data type', () => {
+        return request(server)
+          .get('/NPS/parks/acad')
+          .expect('Content-Type', /application\/json/)
+          .expect(200);
+      });
+      it('router should respond with full name of park sent through url', () => {
+        return request(server)
+          .get('/NPS/parks/acad')
+          .expect('Content-Type', /application\/json/)
+          .expect((res) =>
+            expect(res.body.fullName).toEqual('Acadia National Park')
+          );
+      });
+    });
+    describe('GET', () => {
+      it('router should respond with 200 status and application json data type', () => {
+        return request(server)
+          .get('/NPS/modalInfo/acad')
+          .expect('Content-Type', /application\/json/)
+          .expect(200);
+      });
+      it('router should respond with object with states key and ME value', () => {
+        return request(server)
+          .get('/NPS/modalInfo/acad')
+          .expect('Content-Type', /application\/json/)
+          .expect((res) => expect(res.body.states).toBe('ME'));
+      });
+    });
+  });
+
   describe('/user', () => {
     describe('POST', () => {
       afterEach(async () => {
@@ -103,11 +152,11 @@ describe('Route integration', () => {
         return request(server)
           .get('/user/Max/acad')
           .then((res) => {
-            expect(res.body.date).toEqual('2022-12-01')
-            expect(res.body.notes).toEqual('this park was fun')
-            expect(res.body.activitiesCompleted).toEqual([ 'climbing' ])
+            expect(res.body.date).toEqual('2022-12-01');
+            expect(res.body.notes).toEqual('this park was fun');
+            expect(res.body.activitiesCompleted).toEqual(['climbing']);
           });
-       });
+      });
     });
     describe('POST', () => {
       it('responds with a 201 status and application/json content type', () => {
