@@ -40,11 +40,11 @@ userController.getUser = (req, res, next) => {
 userController.addPark = async (req, res, next) => {
   try {
     const parkCode = req.params.parkCode;
-    const newPark = {
+ const newPark = {
       date: req.body.date,
       notes: req.body.notes,
       activitiesCompleted: req.body.activitiesDone,
-    };
+    };   
     // const user = await User.findOne({ name: req.body.name})
     const userParam = req.params.userParam;
     const user = await User.findOne({ name: userParam });
