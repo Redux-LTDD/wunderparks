@@ -19,22 +19,22 @@ const App = () => {
         setCodes(data);
       })
       .catch((err) => console.log('AddPark fetch POST to api: ERROR: ', err));
-  }, []);
+  }, [user]);
 
   return (
     <div className='app'>
-      {/* <SidebarContainer
+      <SidebarContainer
         codes={codes}
         users={users}
         user={user}
         setUser={setUser}
-      /> */}
+      />
       <div className='right'>
         <div className='float'>
           <h1> WÜNDER PARKS {user}</h1>
           {/* <h2>Natty Parks</h2> */}
         </div>
-        {/* <MainContainer codes={codes} user={user} /> */}
+        <MainContainer codes={codes} user={user} />
       </div>
     </div>
   );
