@@ -5,13 +5,15 @@ import MainContainer from '../containers/MainContainer.jsx';
 const App = () => {
   // let codes = [];
   const [codes, setCodes] = useState([]);
+  const [users, queryUsers] = useState(['Arthur', 'Jacob', 'Max', 'Kyle']);
+  const [user, setUser] = useState('Arthur');
 
   const handleUpdate = (newData) => {
     setData([newData, ...data]);
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/user/', {
+    fetch(`http://localhost:3000/user/${user}`, {
       method: 'GET',
       headers: { 'Content-Type': 'Application/JSON' },
     })
@@ -22,12 +24,16 @@ const App = () => {
       .catch((err) => console.log('AddPark fetch POST to api: ERROR: ', err));
   }, []);
 
-
   return (
-    <div className="app">
-      <SidebarContainer codes={codes} />
-      <div className="right">
-        <div className="float">
+    <div className='app'>
+      <SidebarContainer
+        codes={codes}
+        users={users}
+        user={user}
+        setUser={setUser}
+      />
+      <div className='right'>
+        <div className='float'>
           <h1> WÜNDER PARKS</h1>
         </div>
         <MainContainer codes={codes} />

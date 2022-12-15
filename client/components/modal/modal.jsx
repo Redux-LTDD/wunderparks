@@ -19,8 +19,9 @@ const Modal = (props) => {
 
   // send fetch request to DB to get user info
   useEffect(() => {
-    fetch(`http://localhost:3000/NPS/modalInfo/${props.parkCode}`)
-    console.log('props.parkcode', props.parkCode)
+    fetch(`http://localhost:3000/NPS/modalInfo/${props.parkCode}`);
+    console
+      .log('props.parkcode', props.parkCode)
       .then((res) => res.json())
       .then((data) => {
         setNpsData(data);
@@ -49,8 +50,8 @@ const Modal = (props) => {
         parkActivitiesList.push(<li>{userData.activitiesCompleted[i]}</li>);
       }
       return (
-        <p className="park_activities">
-          <span className="label">Activities Completed: </span>
+        <p className='park_activities'>
+          <span className='label'>Activities Completed: </span>
           <ul>{parkActivitiesList}</ul>
         </p>
       );
@@ -64,17 +65,17 @@ const Modal = (props) => {
     console.log('npsData inside userDataExists :', npsData);
     if (userData.date) {
       return (
-        <div className="user_info">
+        <div className='user_info'>
           {/* <h4>User Log</h4> */}
           {/* {props.parkCode} */}
-          <div className="left">
-            <p className="date_visited">
-              <span className="label">Date Visited: </span>
+          <div className='left'>
+            <p className='date_visited'>
+              <span className='label'>Date Visited: </span>
               <br />
               {userData.date}
             </p>
-            <p className="user_notes">
-              <span className="label">Notes: </span>
+            <p className='user_notes'>
+              <span className='label'>Notes: </span>
               <br />
               {userData.notes}
             </p>
@@ -82,16 +83,15 @@ const Modal = (props) => {
           {parksActivitiesExist()}
         </div>
       );
-    }
-    else return null;
+    } else return null;
   }
 
   function npsDataComponent() {
     return (
-      <div className="api_data">
+      <div className='api_data'>
         <h4>Park Information</h4>
-        <p className="description">{npsData.description}</p>
-        <img src={npsData.photo} className="photo" />
+        <p className='description'>{npsData.description}</p>
+        <img src={npsData.photo} className='photo' />
       </div>
     );
   }
@@ -100,25 +100,25 @@ const Modal = (props) => {
 
   return (
     <div className={`modal ${props.className}`} onClick={props.onClose}>
-      <div className="content" onClick={(e) => e.stopPropagation()}>
-        <div className="header">
-          <h3 className="title">
-            {props.parkName + ' National Park '} <br/>
-            <small className="state">{stateObj[npsData.states]}</small>
+      <div className='content' onClick={(e) => e.stopPropagation()}>
+        <div className='header'>
+          <h3 className='title'>
+            {props.parkName + ' National Park '} <br />
+            <small className='state'>{stateObj[npsData.states]}</small>
           </h3>
-          <button className="close" onClick={props.onClose}>
+          <button className='close' onClick={props.onClose}>
             Close
           </button>
         </div>
-        <div className="body">
+        <div className='body'>
           {userDataExists()}
           <hr></hr>
           {npsDataComponent()}
         </div>
-        <div className="push"></div>
+        <div className='push'></div>
       </div>
-      <div className="footer">
-        <a className="copywrite">WÜNDERPARK ©</a>
+      <div className='footer'>
+        <a className='copywrite'>WÜNDERPARK ©</a>
       </div>
     </div>
   );
