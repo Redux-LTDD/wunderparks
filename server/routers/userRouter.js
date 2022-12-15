@@ -13,16 +13,20 @@ userRouter.get(
 );
 
 userRouter.get('/:userParam', userController.getParks, (_req, res) => {
+  console.log('/user/username SENDING');
   return res.status(200).json(res.locals.parks);
 });
 
-userRouter.post('/:userParam/:parkCode', userController.addPark, (_req, res) => {
-  return res.status(201).json(res.locals.park);
-});
+userRouter.post(
+  '/:userParam/:parkCode',
+  userController.addPark,
+  (_req, res) => {
+    return res.status(200).json(res.locals.park);
+  }
+);
 
 userRouter.post('/', userController.createUser, (_req, res) => {
   return res.status(201).json(res.locals.newUser);
 });
-
 
 module.exports = userRouter;
