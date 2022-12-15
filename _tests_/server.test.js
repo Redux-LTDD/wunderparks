@@ -25,9 +25,9 @@ afterAll(async () =>{
 describe('Route integration', () => {
     
 
-    beforeAll(async() => {
+    beforeEach(async() => {
 
-       await User.create({
+        await User.create({
             name: "Max",
             parksVisited:{
                 acad: {
@@ -44,7 +44,7 @@ describe('Route integration', () => {
         });
     });
 
-    afterAll( async () =>{
+    afterEach( async () =>{
         await User.findOneAndDelete({name:"Max"});
     });
         //use schema to create user object in mogodb
@@ -69,18 +69,44 @@ describe('Route integration', () => {
     describe('/user', () =>{
 
         describe('POST', () => {
+
+            it('responds with a 201 status and application/json content type', () =>{
+                return request(server)
+                    .post('/user/Max/glac')
+                    .expect(201)
+                    .expect("Content-Type", /application\/json/)
+            })
+             it('should have a new park in the parksVisited object', () => {
+                return request(server)
+                    .post('/user/Max/glac')
+                    .send({
+                        date: "2022-12-02",
+                        notes: "hi",
+                        activitiesDone: ["biking" , "climbing"]
+                    })
+                    .expect((res) => res.body.date === "hjkasdfhjklasdf")
+                    // .expect(
+                    //     User.parksVisited[glac] === {
+                    //     date: '2022-12-02',
+                    //     notes: 'hi',
+                    //     activitiesCompleted: [ 'biking', 'climbing' ]
+                    //   })
+             })
+        })
+
+        describe('POST', () => {
             afterEach(async () =>{
                 await User.findOneAndDelete({name:"Jacob"});
             })
 
-            it('responds with a 201 status and application/json content type', () => {
+            xit('responds with a 201 status and application/json content type', () => {
                 return request(server)
                     .post('/user')
                     .send({name:"Jacob"})
                     .expect(201)
                     .expect("Content-Type", /application\/json/)
             })
-            it('should have newUser in body of response', () => {
+            xit('should have newUser in body of response', () => {
                 return request(server)
                     .post('/user')
                     .send({name:"Jacob"})
@@ -88,7 +114,7 @@ describe('Route integration', () => {
                     // .expect(res.body.name).toBe("Jacob")
                     // .expect((res)=> res.body.name).toEqual('Jacob')
                     // .expect(newUser[name]).toBe('Jacob')
-                    .expect(User.findOne({name:'Jacob'}))
+                    .expect((res) => console.log(res.body))
                     
             })
         })

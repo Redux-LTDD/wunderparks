@@ -17,7 +17,7 @@ userRouter.get('/:userParam', userController.getParks, (_req, res) => {
 });
 
 userRouter.post('/:userParam/:parkCode', userController.addPark, (_req, res) => {
-  return res.status(200).json(res.locals.park);
+  return res.status(201).json(res.locals.park);
 });
 
 userRouter.post('/', userController.createUser, (_req, res) => {
