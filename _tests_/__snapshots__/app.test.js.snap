@@ -5,15 +5,1159 @@ exports[`testings snapshots renders correctly according to snapshot 1`] = `
   className="app"
 >
   <div
+    className="sidebarContainer"
+  >
+    <div
+      id="form"
+    >
+      <form
+        className="userform"
+      >
+        <h2>
+          Log a trip
+        </h2>
+        <div
+          className="select-dropdown"
+        >
+          <select
+            className="select-dropdown"
+            id="user"
+            name="user"
+            onChange={[Function]}
+            value="Arthur"
+          >
+            <option
+              value=""
+            >
+              Select User:
+            </option>
+            <option
+              value="Arthur"
+            >
+              Arthur
+            </option>
+            <option
+              value="Jacob"
+            >
+              Jacob
+            </option>
+            <option
+              value="Max"
+            >
+              Max
+            </option>
+            <option
+              value="Kyle"
+            >
+              Kyle
+            </option>
+          </select>
+        </div>
+      </form>
+      <form
+        className="form"
+      >
+        <div
+          className="select-dropdown"
+        >
+          <select
+            className="select-dropdown"
+            id="park"
+            name="park"
+            onChange={[Function]}
+            value=""
+          >
+            <option
+              value=""
+            >
+              Select Park:
+            </option>
+            <option
+              id="TEST acad"
+              value="acad"
+            >
+              Acadia
+            </option>
+            <option
+              id="TEST arch"
+              value="arch"
+            >
+              Arches
+            </option>
+            <option
+              id="TEST badl"
+              value="badl"
+            >
+              Badlands
+            </option>
+            <option
+              id="TEST bibe"
+              value="bibe"
+            >
+              Big Bend
+            </option>
+            <option
+              id="TEST bisc"
+              value="bisc"
+            >
+              Biscayne
+            </option>
+            <option
+              id="TEST blca"
+              value="blca"
+            >
+              Black Canyon Of The Gunnison
+            </option>
+            <option
+              id="TEST brca"
+              value="brca"
+            >
+              Bryce Canyon
+            </option>
+            <option
+              id="TEST cany"
+              value="cany"
+            >
+              Canyonlands
+            </option>
+            <option
+              id="TEST care"
+              value="care"
+            >
+              Capitol Reef
+            </option>
+            <option
+              id="TEST cave"
+              value="cave"
+            >
+              Carlsbad Caverns
+            </option>
+            <option
+              id="TEST chis"
+              value="chis"
+            >
+              Channel Islands
+            </option>
+            <option
+              id="TEST cong"
+              value="cong"
+            >
+              Congaree
+            </option>
+            <option
+              id="TEST crla"
+              value="crla"
+            >
+              Crater Lake
+            </option>
+            <option
+              id="TEST cuva"
+              value="cuva"
+            >
+              Cuyahoga Valley
+            </option>
+            <option
+              id="TEST deva"
+              value="deva"
+            >
+              Death Valley
+            </option>
+            <option
+              id="TEST dena"
+              value="dena"
+            >
+              Denali
+            </option>
+            <option
+              id="TEST drto"
+              value="drto"
+            >
+              Dry Tortugas
+            </option>
+            <option
+              id="TEST ever"
+              value="ever"
+            >
+              Everglades
+            </option>
+            <option
+              id="TEST gaar"
+              value="gaar"
+            >
+              Gates Of The Arctic
+            </option>
+            <option
+              id="TEST jeff"
+              value="jeff"
+            >
+              Gateway Arch
+            </option>
+            <option
+              id="TEST glba"
+              value="glba"
+            >
+              Glacier Bay
+            </option>
+            <option
+              id="TEST glac"
+              value="glac"
+            >
+              Glacier
+            </option>
+            <option
+              id="TEST grca"
+              value="grca"
+            >
+              Grand Canyon
+            </option>
+            <option
+              id="TEST grte"
+              value="grte"
+            >
+              Grand Teton
+            </option>
+            <option
+              id="TEST grba"
+              value="grba"
+            >
+              Great Basin
+            </option>
+            <option
+              id="TEST grsa"
+              value="grsa"
+            >
+              Great Sand Dunes
+            </option>
+            <option
+              id="TEST grsm"
+              value="grsm"
+            >
+              Great Smoky Mountains
+            </option>
+            <option
+              id="TEST gumo"
+              value="gumo"
+            >
+              Guadalupe Mountains
+            </option>
+            <option
+              id="TEST hale"
+              value="hale"
+            >
+              Haleakalā
+            </option>
+            <option
+              id="TEST havo"
+              value="havo"
+            >
+              Hawaiʻi Volcanoes
+            </option>
+            <option
+              id="TEST hosp"
+              value="hosp"
+            >
+              Hot Springs
+            </option>
+            <option
+              id="TEST indu"
+              value="indu"
+            >
+              Indiana Dunes
+            </option>
+            <option
+              id="TEST isro"
+              value="isro"
+            >
+              Isle Royale
+            </option>
+            <option
+              id="TEST jotr"
+              value="jotr"
+            >
+              Joshua Tree
+            </option>
+            <option
+              id="TEST katm"
+              value="katm"
+            >
+              Katmai
+            </option>
+            <option
+              id="TEST kefj"
+              value="kefj"
+            >
+              Kenai Fjords
+            </option>
+            <option
+              id="TEST kova"
+              value="kova"
+            >
+              Kobuk Valley
+            </option>
+            <option
+              id="TEST lacl"
+              value="lacl"
+            >
+              Lake Clark
+            </option>
+            <option
+              id="TEST lavo"
+              value="lavo"
+            >
+              Lassen Volcanic
+            </option>
+            <option
+              id="TEST maca"
+              value="maca"
+            >
+              Mammoth Cave
+            </option>
+            <option
+              id="TEST meve"
+              value="meve"
+            >
+              Mesa Verde
+            </option>
+            <option
+              id="TEST mora"
+              value="mora"
+            >
+              Mount Rainier
+            </option>
+            <option
+              id="TEST npsa"
+              value="npsa"
+            >
+              National Park of American Samoa
+            </option>
+            <option
+              id="TEST neri"
+              value="neri"
+            >
+              New River Gorge
+            </option>
+            <option
+              id="TEST noca"
+              value="noca"
+            >
+              North Cascades
+            </option>
+            <option
+              id="TEST olym"
+              value="olym"
+            >
+              Olympic
+            </option>
+            <option
+              id="TEST pefo"
+              value="pefo"
+            >
+              Petrified Forest
+            </option>
+            <option
+              id="TEST pinn"
+              value="pinn"
+            >
+              Pinnacles
+            </option>
+            <option
+              id="TEST redw"
+              value="redw"
+            >
+              Redwood
+            </option>
+            <option
+              id="TEST romo"
+              value="romo"
+            >
+              Rocky Mountain
+            </option>
+            <option
+              id="TEST sagu"
+              value="sagu"
+            >
+              Saguaro
+            </option>
+            <option
+              id="TEST seki"
+              value="seki"
+            >
+              Sequoia & Kings Canyon
+            </option>
+            <option
+              id="TEST shen"
+              value="shen"
+            >
+              Shenandoah
+            </option>
+            <option
+              id="TEST thro"
+              value="thro"
+            >
+              Theodore Roosevelt
+            </option>
+            <option
+              id="TEST viis"
+              value="viis"
+            >
+              Virgin Islands
+            </option>
+            <option
+              id="TEST voya"
+              value="voya"
+            >
+              Voyageurs
+            </option>
+            <option
+              id="TEST whsa"
+              value="whsa"
+            >
+              White Sands
+            </option>
+            <option
+              id="TEST wica"
+              value="wica"
+            >
+              Wind Cave
+            </option>
+            <option
+              id="TEST wrst"
+              value="wrst"
+            >
+              Wrangell - St Elias
+            </option>
+            <option
+              id="TEST yell"
+              value="yell"
+            >
+              Yellowstone
+            </option>
+            <option
+              id="TEST yose"
+              value="yose"
+            >
+              Yosemite
+            </option>
+            <option
+              id="TEST zion"
+              value="zion"
+            >
+              Zion
+            </option>
+          </select>
+        </div>
+        <h3>
+          Date Visited:
+        </h3>
+        <input
+          id="date_visited"
+          onChange={[Function]}
+          type="date"
+          value=""
+        />
+        <h3>
+          Activities Done
+        </h3>
+        <div
+          className="checkboxes"
+        >
+          <input
+            id="biking"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="biking"
+          >
+            Biking
+          </label>
+          <input
+            id="camping"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="camping"
+          >
+            Camping
+          </label>
+          <input
+            id="climbing"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="climbing"
+          >
+            Climbing
+          </label>
+          <input
+            id="fishing"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor=""
+          >
+            Fishing
+          </label>
+          <input
+            id="guided"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="guided"
+          >
+            Guided Tours
+          </label>
+          <input
+            id="hiking"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="hiking"
+          >
+            Hiking
+          </label>
+          <input
+            id="paddling"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor=""
+          >
+            Paddling
+          </label>
+          <input
+            id="snorkeling"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="snorkeling"
+          >
+            Snorkeling
+          </label>
+          <input
+            id="swimming"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="swimming"
+          >
+            Swimming
+          </label>
+          <input
+            id="wildlife"
+            onChange={[Function]}
+            type="checkbox"
+            value={false}
+          />
+           
+          <label
+            htmlFor="wildlife"
+          >
+            Wildlife
+          </label>
+        </div>
+        <h3>
+          Notes:
+        </h3>
+        <textarea
+          className="comments"
+          cols="28"
+          onChange={[Function]}
+          placeholder="Weather was great, but the crowd wasn't..."
+          rows="10"
+        />
+        <button
+          id="submit"
+          onClick={[Function]}
+          type="submit"
+        >
+          Save Park
+        </button>
+      </form>
+    </div>
+    <div
+      className="parkTally"
+    >
+      <ul
+        className="visited_list"
+      >
+        <h2>
+          Parks Visited: 
+          0
+        </h2>
+        <div
+          className="progress"
+        >
+          <div
+            aria-valuemax={100}
+            aria-valuemin={0}
+            aria-valuenow={0}
+            className="progress-bar"
+            role="progressbar"
+            style={
+              {
+                "width": "0%",
+              }
+            }
+          >
+            0%
+          </div>
+        </div>
+        <div
+          className="listItems"
+        />
+      </ul>
+    </div>
+  </div>
+  <div
     className="right"
   >
     <div
       className="float"
     >
       <h1>
-         WÜNDER PARKSS 
+         WÜNDER PARKS 
         Arthur
       </h1>
+    </div>
+    <div
+      className="main"
+      id="mainContainer"
+    >
+      <div
+        className="container"
+      >
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Acadia"
+            onClick={[Function]}
+            src="https://i.imgur.com/T1j5kyt.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="American Samoa"
+            onClick={[Function]}
+            src="https://i.imgur.com/WMKy48U.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Arches"
+            onClick={[Function]}
+            src="https://i.imgur.com/N2awDnc.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Badlands"
+            onClick={[Function]}
+            src="https://i.imgur.com/lfoyaBF.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Big Bend"
+            onClick={[Function]}
+            src="https://i.imgur.com/jC0AsJ9.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Biscayne"
+            onClick={[Function]}
+            src="https://i.imgur.com/zgS0Yn8.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Black Canyon"
+            onClick={[Function]}
+            src="https://i.imgur.com/QZuss1y.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Bryce Canyons"
+            onClick={[Function]}
+            src="https://i.imgur.com/wMM3wkH.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Canyonlands"
+            onClick={[Function]}
+            src="https://i.imgur.com/4KenNzH.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Capitol Reef"
+            onClick={[Function]}
+            src="https://i.imgur.com/f0pKQu0.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Carlsbad Caverns"
+            onClick={[Function]}
+            src="https://i.imgur.com/Fud1s2i.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Channel Islands"
+            onClick={[Function]}
+            src="https://i.imgur.com/tsMGpGa.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Congaree"
+            onClick={[Function]}
+            src="https://i.imgur.com/wQIlRaW.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Crater Lake"
+            onClick={[Function]}
+            src="https://i.imgur.com/brp7nEg.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Cuyahoga Valley"
+            onClick={[Function]}
+            src="https://i.imgur.com/6migtVY.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Death Valley"
+            onClick={[Function]}
+            src="https://i.imgur.com/Dr8yM6q.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Denali"
+            onClick={[Function]}
+            src="https://i.imgur.com/TJizQ6e.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Dry Tortugas"
+            onClick={[Function]}
+            src="https://i.imgur.com/KokGV2V.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Everglades"
+            onClick={[Function]}
+            src="https://i.imgur.com/YH1T2fI.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Gates Of The Arctic"
+            onClick={[Function]}
+            src="https://i.imgur.com/LIAQ9wI.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Gateway Arch"
+            onClick={[Function]}
+            src="https://i.imgur.com/sK4gHIV.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Glacier Bay"
+            onClick={[Function]}
+            src="https://i.imgur.com/ehOBd5v.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Glacier"
+            onClick={[Function]}
+            src="https://i.imgur.com/Y2aAJ8z.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Grand Canyon"
+            onClick={[Function]}
+            src="https://i.imgur.com/rkPwlYz.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Grand Teton"
+            onClick={[Function]}
+            src="https://i.imgur.com/v2UBUTw.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Great Basin"
+            onClick={[Function]}
+            src="https://i.imgur.com/iA53DOg.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Great Sand Dunes"
+            onClick={[Function]}
+            src="https://i.imgur.com/i87peTC.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Great Smoky"
+            onClick={[Function]}
+            src="https://i.imgur.com/9sEBovY.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Guadalupe"
+            onClick={[Function]}
+            src="https://i.imgur.com/ebw28Ff.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Haleakala"
+            onClick={[Function]}
+            src="https://i.imgur.com/yCMgvdI.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Hawaii volcanoes"
+            onClick={[Function]}
+            src="https://i.imgur.com/8Nxh6DD.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Hot Spring"
+            onClick={[Function]}
+            src="https://i.imgur.com/m3gI7JJ.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Indiana Dunes"
+            onClick={[Function]}
+            src="https://i.imgur.com/ZVSJL97.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Isle Royale"
+            onClick={[Function]}
+            src="https://i.imgur.com/wADPuZr.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Joshua Tree"
+            onClick={[Function]}
+            src="https://i.imgur.com/eb6FV5A.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Katmai"
+            onClick={[Function]}
+            src="https://i.imgur.com/FO2jn5K.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Kenai Fjords"
+            onClick={[Function]}
+            src="https://i.imgur.com/CjVRXrD.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Kings Canyon"
+            onClick={[Function]}
+            src="https://i.imgur.com/78scmzE.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Kobuk Valley"
+            onClick={[Function]}
+            src="https://i.imgur.com/cALDUze.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Lake Clark"
+            onClick={[Function]}
+            src="https://i.imgur.com/UQ3Qo52.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Lassen Volcanic"
+            onClick={[Function]}
+            src="https://i.imgur.com/3fawFFn.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Mammoth Cave"
+            onClick={[Function]}
+            src="https://i.imgur.com/0AR6fK2.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Mesa Verde"
+            onClick={[Function]}
+            src="https://i.imgur.com/4vjIa6w.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Mount Rainier"
+            onClick={[Function]}
+            src="https://i.imgur.com/ZGqdrRu.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="New River Gorge"
+            onClick={[Function]}
+            src="https://i.imgur.com/Xj5UY13.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="North Cascades"
+            onClick={[Function]}
+            src="https://i.imgur.com/FtxwWRr.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Olympic"
+            onClick={[Function]}
+            src="https://i.imgur.com/1WyOCgT.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Petrified Forest"
+            onClick={[Function]}
+            src="https://i.imgur.com/GO8xMEO.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Pinnacles"
+            onClick={[Function]}
+            src="https://i.imgur.com/7LRQZDT.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Redwood"
+            onClick={[Function]}
+            src="https://i.imgur.com/Ivma21M.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Rockey Mountain"
+            onClick={[Function]}
+            src="https://i.imgur.com/L2hqfCV.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Saguaro"
+            onClick={[Function]}
+            src="https://i.imgur.com/oVJJUoy.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Sequoia"
+            onClick={[Function]}
+            src="https://i.imgur.com/Ft6skrh.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Shenandoah"
+            onClick={[Function]}
+            src="https://i.imgur.com/bQfhAg6.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Theodore Roosevelt"
+            onClick={[Function]}
+            src="https://i.imgur.com/qB80VRU.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Virgin Islands"
+            onClick={[Function]}
+            src="https://i.imgur.com/TMPg2SQ.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Voyageurs"
+            onClick={[Function]}
+            src="https://i.imgur.com/w0zB08x.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="White Sands"
+            onClick={[Function]}
+            src="https://i.imgur.com/32wcjeE.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Wind Cave"
+            onClick={[Function]}
+            src="https://i.imgur.com/3wERqFj.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Wrangell-St. Elias"
+            onClick={[Function]}
+            src="https://i.imgur.com/OZCyXoa.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Yellowstone"
+            onClick={[Function]}
+            src="https://i.imgur.com/g6aEaDQ.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Yosemite"
+            onClick={[Function]}
+            src="https://i.imgur.com/ks7Vg4K.png"
+          />
+        </div>
+        <div>
+          <img
+            className="undefined imageIcon"
+            id="Zion"
+            onClick={[Function]}
+            src="https://i.imgur.com/qOl1XZ0.png"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </div>
