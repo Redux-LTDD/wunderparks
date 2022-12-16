@@ -110,15 +110,19 @@ jest.mock('axios');
 describe('AXIOS', () => {
   describe('when the call is successful', () => {
     it('should return users list', async () => {
-      const fakeUser = ['bgte', 'arch'];
+      const fakeUser = ['bgte', 'arch']; //memory location 0
 
       axios.get.mockResolvedValueOnce(fakeUser);
+      // axios.get.mockResolvedValueOnce(['bgte', 'arch']); //memory location 1
 
       const result = await fetchUsers();
       console.debug(result === fakeUser);
 
       expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/user');
-      expect(result).toEqual(fakeUser);
+      expect(result).toEqual(fakeUser); //YES //memory location 0
+      expect(result).toBe(fakeUser); //YES //memory location 0
+      // expect(result).toEqual(['bgte', 'arch']); //YES //memory location 2
+      // expect(result).toBe(['bgte', 'arch']); //NO //memory location 3
     });
     describe('when API call fails', () => {
       it('should return empty users list', async () => {

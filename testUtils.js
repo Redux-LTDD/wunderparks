@@ -7,3 +7,5 @@ export const fetchUsers = async () => {
     return [];
   }
 };
+
+// module.exports = *
